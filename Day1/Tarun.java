@@ -9,6 +9,8 @@ public class Tarun{
             System.out.print(A[i]+",");
         }
     }
+    //This function initialize a new array with -1 at each index in B array and search for values in A array if found then insert that index 
+    in as element in B array.
     public static void rearrange(int[] A,int n){
      int[] B=new int[A.length];
      for(int i=0;i<A.length;i++){
