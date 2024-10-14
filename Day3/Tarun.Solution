@@ -1,0 +1,23 @@
+class Solution {
+    public void deleteAlt(Node head) {
+        Node p=head;
+        Node q=p.next;
+        while(p.next!=null){
+           q=q.next;
+           p.next=q;
+           if(q!=null){
+               p=p.next;
+               q=q.next;
+           }
+        }
+        
+    }
+}
+
+Description:-
+Bring 2 pointers p on head node and q on next of p pointer.
+Iterate through the linked list until the p.next !=null means until the full list is to be traversed.
+update q by 1;
+make link on q to p;
+update p and q by 1 node until the q pointer doesn't points on the null .it means q traversed the last node of list and points on the null.
+If opearation is done like updation of q then it throws NullPointerException.
