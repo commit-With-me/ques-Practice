@@ -1,0 +1,21 @@
+class Solution {
+    public void deleteAlt(Node head) {
+        Node p=head;
+        Node q=p.next;
+        while(p.next!=null){
+           q=q.next;
+           p.next=q;
+           if(q!=null){
+               p=p.next;
+               q=q.next;
+           }
+        }
+        
+    }
+}
+
+Description:-
+bring p poniter on head and q on next of p and iterate through the linked list until q does not point on null.
+Update q by 1;
+make link of next of p to q until q!=null.
+Hence we can delete the nodes of alternate even position and these nodes are collected by Garbage Collector,because these nodes are not reachable or not in use.
