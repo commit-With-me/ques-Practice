@@ -23,3 +23,14 @@ class Solution {
         }
     }
 }
+Description:
+ set low=0;mid=0 and high =n-1;
+ check arr[mid]:
+      if 0,swap(low,mid); low++,mid++;
+      if 1,mid++;
+      if 2,swap(mid,high); high--;
+ Repeat until mid to high elements traversed.means when mid==high stop the loop.
+
+
+=>this algo is known as DNF(Dutch national flag) sorting algo that aims to sort only 0,1,& 2 elements.
+      
