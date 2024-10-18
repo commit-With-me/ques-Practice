@@ -1,0 +1,13 @@
+class Solution {
+    int missingNumber(int arr[]) {
+        // code here
+        int i,n;
+        int sum=0;
+        for(i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        n=arr.length+1;
+        int sumNatural=(n*(n+1))/2;
+      return sumNatural-sum;
+    }
+}
