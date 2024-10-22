@@ -1,0 +1,66 @@
+1st Approach:
+class Solution {
+    public static int findMax(int arr[]) {
+        int maxi = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maxi) {
+                maxi = arr[i];
+            }
+        }
+        return maxi;
+    }
+
+    String result = "";
+
+    public String MaxNumber(int arr[]) {
+        int max = findMax(arr);
+        int[] H = new int[max + 1];
+
+        // Initialize the count array
+        for (int i = 0; i < arr.length; i++) {
+            H[arr[i]]++;
+        }
+
+        // Build the result string in descending order
+        for (int i = H.length - 1; i >= 0; i--) {
+            while (H[i] > 0) {
+                result += Integer.toString(i);
+                H[i]--;
+            }
+        }
+
+        return result;
+    }
+}
+
+
+2nd Approach:-
+class Solution {
+    String result="";
+    public String MaxNumber(int arr[]) {
+        // code here.
+    Arrays.sort(arr);
+    String result=new Stringbuilder();
+    for(int i=arr.length-1;i>=0;i--){
+        result+=Integer.toString(arr[i]);
+    }
+    return result;  
+    }
+}
+
+
+3rd Approach:-
+
+class Solution {
+    String result="";
+    public String MaxNumber(int arr[]) {
+        // code here.
+    Arrays.sort(arr);
+    StringBuilder result=new StringBuilder();
+    for(int i=arr.length-1;i>=0;i--){
+        result.append(arr[i]);
+    }
+    return result.toString();  
+    }
+}
+
